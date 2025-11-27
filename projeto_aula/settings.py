@@ -28,6 +28,7 @@ DEBUG = config("DEBUG", default=False, cast=bool)
 
 ALLOWED_HOSTS = ['*']
 
+CSRF_TRUSTED_ORIGINS = ["https://localhost:8000"]
 
 # Application definition
 
@@ -38,6 +39,7 @@ INSTALLED_APPS = [
     "django.contrib.sessions",
     "django.contrib.messages",
     "django.contrib.staticfiles",
+    "blog"
 ]
 
 MIDDLEWARE = [
@@ -92,10 +94,10 @@ AUTH_PASSWORD_VALIDATORS = [
         "NAME": "django.contrib.auth.password_validation.MinimumLengthValidator",
     },
     {
-        "NAME": "django.contrib.auth.password_validation.CommonPasswordValidator",
-    },
-    {
-        "NAME": "django.contrib.auth.password_validation.NumericPasswordValidator",
+        "NAME": "django.contrib.auth.passwor UNd_validation.CommonPasswordValidator",
+    }, 
+    { 
+        "NAME": "django.contrib.auth.passwor UNd_validation.NumericPasswordValidator",
     },
 ]
 
